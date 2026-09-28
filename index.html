@@ -1,11 +1,71 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculadora</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculadora de Média</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+  <main class="page">
+    <header class="topbar">
+      <div class="brand">
+        <div class="brand-icon">▦</div>
+        <div>
+          <strong>Nota Certa</strong>
+          <small>CALCULADORA ESCOLAR</small>
+        </div>
+      </div>
+      <span class="tagline">✦ simples, rápido e sem complicação</span>
+    </header>
+
+    <section class="content">
+      <div class="intro">
+        <p class="eyebrow">Seu resultado começa aqui</p>
+        <h1>Descubra sua<br><em>média final.</em></h1>
+        <p class="description">Digite as três notas do aluno e deixe a conta com a gente. O resultado aparece na hora, de um jeito claro e fácil de entender.</p>
+        <p class="note">① ② ③ &nbsp; Três notas. Uma resposta.</p>
+      </div>
+
+      <section class="card" aria-labelledby="titulo-calculadora">
+        <div class="gold-line"></div>
+        <div class="card-heading">
+          <div>
+            <p class="card-kicker">Boletim do aluno</p>
+            <h2 id="titulo-calculadora">Calcule sua média</h2>
+          </div>
+          <span class="range">0 a 10</span>
+        </div>
+
+        <form id="form-media">
+          <div class="grades">
+            <label>Nota 1 <span>/ 10</span><input id="nota1" type="text" inputmode="decimal" placeholder="0,0" aria-label="Nota 1"></label>
+            <label>Nota 2 <span>/ 10</span><input id="nota2" type="text" inputmode="decimal" placeholder="0,0" aria-label="Nota 2"></label>
+            <label>Nota 3 <span>/ 10</span><input id="nota3" type="text" inputmode="decimal" placeholder="0,0" aria-label="Nota 3"></label>
+          </div>
+          <p id="erro" class="error" role="alert" hidden>Digite valores entre 0 e 10 em todos os campos.</p>
+          <button type="submit" class="calculate">Calcular média <span>→</span></button>
+        </form>
+
+        <div id="resultado-vazio" class="empty">▦ <span>Preencha as notas para ver o resultado.</span></div>
+        <div id="resultado" class="result" hidden>
+          <div>
+            <p class="result-kicker">Situação</p>
+            <h3 id="situacao">Aprovado</h3>
+            <p id="mensagem" class="result-message">Parabéns! Excelente resultado.</p>
+          </div>
+          <div class="average"><strong id="media">8,0</strong><small>MÉDIA</small></div>
+        </div>
+        <button id="limpar" type="button" class="clear">↻ &nbsp; Limpar notas</button>
+        <p class="formula">A média é calculada somando as três notas e dividindo por 3.</p>
+      </section>
+    </section>
+
+    <footer><span>Nota Certa © 2026</span><span>Feito para tornar o aprendizado mais simples.</span></footer>
+  </main>
+  <script src="script.js"></script>
 </body>
 </html>
